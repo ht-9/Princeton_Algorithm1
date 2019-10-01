@@ -6,7 +6,7 @@ I just need to complete Percolation.java and PercolationStats.java
 
 ****************************************************************************************
 
---First Revision
+--First Revision 90/100
 
 I delete the codes that initalize the grid in Percolation() becauce its'elements was automaticly assigned to 0.
 
