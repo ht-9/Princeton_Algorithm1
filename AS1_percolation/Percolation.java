@@ -80,7 +80,7 @@ public class Percolation {
         if (row < 0 || row > grid.length || col < 0 || col > grid.length) {
             throw new IllegalArgumentException();
         }
-        return isOpen(row, col) && qu.connected(index(row, col), 0);
+        return isOpen(row, col) && checkFull.connected(index(row, col), 0);
     }
 
     // returns the number of open sites
