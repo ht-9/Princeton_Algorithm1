@@ -16,9 +16,6 @@ public class Percolation {
 
         grid = new int[n][n];
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                grid[i][j] = 0;
-            }
             qu.union(0, i + 1); // union the top row with virtual top
             checkFull.union(0, i + 1);
             qu.union(n * n + 1, n * n - i); // union the bottom row with virtual bottom
