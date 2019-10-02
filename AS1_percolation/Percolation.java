@@ -30,9 +30,7 @@ public class Percolation {
 
     // opens the site (row, col) if it is not open already
     public void open(int row, int col) {
-        if (row < 0 || row > grid.length || col < 0 || col > grid.length) {
-            throw new IllegalArgumentException();
-        }
+        isValidInput(row, col);
 
         if (isOpen(row, col)) {
             return;
@@ -69,17 +67,13 @@ public class Percolation {
 
     // is the site (row, col) open?
     public boolean isOpen(int row, int col) {
-        if (row < 0 || row > grid.length || col < 0 || col > grid.length) {
-            throw new IllegalArgumentException();
-        }
+        isValidInput(row, col);
         return grid[row - 1][col - 1] == 1;
     }
 
     // is the site (row, col) full?
     public boolean isFull(int row, int col) {
-        if (row < 0 || row > grid.length || col < 0 || col > grid.length) {
-            throw new IllegalArgumentException();
-        }
+        isValidInput(row, col);
         return isOpen(row, col) && checkFull.connected(index(row, col), 0);
     }
 
@@ -94,5 +88,11 @@ public class Percolation {
             return isOpen(1, 1);
         }
         return qu.connected(0, grid.length * grid.length - 1);
+    }
+    
+    private void isValidInput(int row, int col) {
+        if (row < 0 || row > grid.length || col < 0 || col > grid.length) {
+            throw new IndexOutOfBoundsException();
+        }
     }
 }
