@@ -21,3 +21,11 @@ it wastes too much memory due to two WeightedQuickUnionUF are created.
 I replaced all the checking valid index codes by a private method isValidInput() in Percolation.java.
 
 ps. I still didn't get that why I can't get 100%.
+
+***************************************************************************************
+
+--Third Revision 92/100
+
+In PercolationStatus.java, in constructor, I add a statement which detects whether the inputs n or trials are vaild.
+
+ps. Thankfully it improves a little bit!
