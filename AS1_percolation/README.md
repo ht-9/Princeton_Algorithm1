@@ -15,3 +15,9 @@ I delete the codes that initalize the grid in Percolation() becauce its'elements
 it wastes too much memory due to two WeightedQuickUnionUF are created.
 
 ***************************************************************************************
+
+--Second Revision 90/100
+
+I replaced all the checking valid index codes by a private method isValidInput() in Percolation.java.
+
+ps. I still didn't get that why I can't get 100%.
